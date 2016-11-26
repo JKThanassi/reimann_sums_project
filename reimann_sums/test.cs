@@ -9,12 +9,13 @@ namespace reimann_sums
     class test_sums
     {
         static void Main(String[] args) {
-            Console.WriteLine("Left handed sum: " + Program.leftSum(0,3,3,testFunc));
+            Console.WriteLine("Left handed sum: " + Program.leftSum(0,3,4,testFunc));
             Console.WriteLine();
-            Console.WriteLine("midpt sum: " + Program.midSum(0, 3, 3, testFunc));
+            Console.WriteLine("midpt sum: " + Program.midSum(0, 3, 4, testFunc));
             Console.WriteLine();
-            Console.WriteLine("right handed sum: " + Program.rightSum(0, 3, 3, testFunc));
-
+            Console.WriteLine("right handed sum: " + Program.rightSum(0, 3, 4, testFunc));
+            Console.WriteLine();
+            Console.WriteLine("convergence: " + Program.convergence_interval("r", 0, 3, .001, testFunc));
             Console.ReadLine();
 
         }
