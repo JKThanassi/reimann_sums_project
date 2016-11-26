@@ -8,9 +8,6 @@ namespace reimann_sums
 {
     class Program
     {
-        //static void Main(string[] args)
-        //{
-        //}
 
         public static double rightSum(int start, int stop, int n, Func<double,double> f) {
             double width = (stop - start) / (double)n;
