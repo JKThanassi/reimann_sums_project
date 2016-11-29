@@ -38,9 +38,9 @@ namespace reimann_sums
                         if (sub2.Equals("m", StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine("enter the start point: ");
-                            int start = Convert.ToInt32(Console.ReadLine());
+                            double start = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter stop point: ");
-                            int stop = Convert.ToInt32(Console.ReadLine());
+                            double stop = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter the number of intervals you would like to sum over: ");
                             int n = Convert.ToInt32(Console.ReadLine());
                             if ((stop > start) && n > 0)
@@ -56,9 +56,9 @@ namespace reimann_sums
                         else if (sub2.Equals("r", StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine("enter the start point: ");
-                            int start = Convert.ToInt32(Console.ReadLine());
+                            double start = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter stop point: ");
-                            int stop = Convert.ToInt32(Console.ReadLine());
+                            double stop = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter the number of intervals you would like to sum over: ");
                             int n = Convert.ToInt32(Console.ReadLine());
                             if ((stop > start) && n > 0)
@@ -73,9 +73,9 @@ namespace reimann_sums
                         else if (sub2.Equals("l", StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine("enter the start point: ");
-                            int start = Convert.ToInt32(Console.ReadLine());
+                            double start = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter stop point: ");
-                            int stop = Convert.ToInt32(Console.ReadLine());
+                            double stop = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter the number of intervals you would like to sum over: ");
                             int n = Convert.ToInt32(Console.ReadLine());
                             if ((stop > start) && n > 0)
@@ -97,9 +97,9 @@ namespace reimann_sums
                         if (sub2.Equals("m", StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine("enter the start point: ");
-                            int start = Convert.ToInt32(Console.ReadLine());
+                            double start = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter stop point: ");
-                            int stop = Convert.ToInt32(Console.ReadLine());
+                            double stop = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter the Convergence criteria: ");
                             double cCriteria = Convert.ToDouble(Console.ReadLine());
                             if ((stop > start) && cCriteria > 0)
@@ -115,9 +115,9 @@ namespace reimann_sums
                         else if (sub2.Equals("l", StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine("enter the start point: ");
-                            int start = Convert.ToInt32(Console.ReadLine());
+                            double start = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter stop point: ");
-                            int stop = Convert.ToInt32(Console.ReadLine());
+                            double stop = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter the Convergence criteria: ");
                             double cCriteria = Convert.ToDouble(Console.ReadLine());
                             if ((stop > start) && cCriteria > 0)
@@ -133,9 +133,9 @@ namespace reimann_sums
                         else if (sub2.Equals("r", StringComparison.OrdinalIgnoreCase))
                         {
                             Console.WriteLine("enter the start point: ");
-                            int start = Convert.ToInt32(Console.ReadLine());
+                            double start = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter stop point: ");
-                            int stop = Convert.ToInt32(Console.ReadLine());
+                            double stop = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("enter the Convergence criteria: ");
                             double cCriteria = Convert.ToDouble(Console.ReadLine());
                             if ((stop > start) && (cCriteria > 0))

@@ -9,8 +9,8 @@ namespace reimann_sums
     class Program
     {
 
-        public static double rightSum(int start, int stop, int n, Func<double,double> f) {
-            double width = (stop - start) / (double)n;
+        public static double rightSum(double start, double stop, int n, Func<double,double> f) {
+            double width = (stop - start) / n;
             double sum = 0;
 
             for (int i = 0; i < n; i++) {
@@ -20,8 +20,8 @@ namespace reimann_sums
             return width * sum;
         }
 
-        public static double leftSum(int start, int stop, int n, Func<double, double> f) {
-            double width = (stop - start) / (double)n;
+        public static double leftSum(double start, double stop, int n, Func<double, double> f) {
+            double width = (stop - start) / n;
             double sum = 0;
     
             for (int i = 0; i < n; i++)
@@ -33,9 +33,9 @@ namespace reimann_sums
             
         }
 
-        public static double midSum(int start, int stop, int n, Func<double, double> f)
+        public static double midSum(double start, double stop, int n, Func<double, double> f)
         {
-            double width = (stop - start) / (double)n;
+            double width = (stop - start) / n;
             double sum = 0;
 
             for (int i = 0; i < n; i++)
@@ -47,7 +47,7 @@ namespace reimann_sums
         }
 
         // "l" for left, "m" for midpoint, "r" for right
-        public static int convergence_interval(string sum_type, int start, int stop, double cCriteria, Func<double,double> f) {
+        public static int convergence_interval(string sum_type, double start, double stop, double cCriteria, Func<double,double> f) {
             bool isConverged;
             int counter=0; //set as 0 so I can increment the counter at the start of each loop so I dont get count + 1 as my convergence result
             double c;
