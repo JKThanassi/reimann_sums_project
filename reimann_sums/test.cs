@@ -14,6 +14,7 @@ namespace reimann_sums
             string sub2;
             while (true)
             {
+                Console.WriteLine();
                 Console.WriteLine("Please enter what you would like to do:");
                 Console.WriteLine("1 and the type for riemann sum results ex. 1r for a right handed riemann sum");
                 Console.WriteLine("2 and the type for convergence: ex. 2m for solving the convergence of a midpoint riemann sum");
@@ -162,7 +163,7 @@ namespace reimann_sums
         }
 
         public static double testFunc(double x) {
-            return Math.Pow(x, 2) + 4 * x + 3;
+            return 1/x;
         }
     }
 }

@@ -60,6 +60,7 @@ namespace reimann_sums
                     isConverged = cCriteria >= c;
                 } while (!isConverged);
 
+                Console.WriteLine("area: " + leftSum(start, stop, counter, f));
                 return counter;
             }
             else if (sum_type.Equals("m", StringComparison.OrdinalIgnoreCase))
@@ -71,6 +72,7 @@ namespace reimann_sums
                     isConverged = cCriteria > c;
                 } while (!isConverged);
 
+                Console.WriteLine("Area:" + midSum(start, stop, counter, f));
                 return counter;
             }
             else if (sum_type.Equals("r", StringComparison.OrdinalIgnoreCase)) {
@@ -81,6 +83,7 @@ namespace reimann_sums
                     isConverged = cCriteria > c;
                 } while (!isConverged);
 
+                Console.WriteLine("area: " + rightSum(start, stop, counter, f));
                 return counter;
             }
             else
