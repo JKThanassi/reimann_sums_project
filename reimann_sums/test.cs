@@ -88,6 +88,23 @@ namespace reimann_sums
                                 Console.WriteLine("Stop must be greater than start and n must be greater than zero");
                             }
                         }
+                        else if (sub2.Equals("t", StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine("enter the start point: ");
+                            double start = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("enter stop point: ");
+                            double stop = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("enter the number of intervals you would like to sum over: ");
+                            int n = Convert.ToInt32(Console.ReadLine());
+                            if ((stop > start) && n > 0)
+                            {
+                                Console.WriteLine("Riemann sum left: " + Program.trapezoidalSum(start, stop, n, testFunc));
+                            }
+                            else
+                            {
+                                Console.WriteLine("Stop must be greater than start and n must be greater than zero");
+                            }
+                        }
                         else
                         {
                             Console.WriteLine("please input n,m, or r for the second character");
@@ -149,6 +166,24 @@ namespace reimann_sums
                             }
 
                         }
+                        else if (sub2.Equals("t", StringComparison.OrdinalIgnoreCase))
+                        {
+                            Console.WriteLine("enter the start point: ");
+                            double start = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("enter stop point: ");
+                            double stop = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("enter the Convergence criteria: ");
+                            double cCriteria = Convert.ToDouble(Console.ReadLine());
+                            if ((stop > start) && (cCriteria > 0))
+                            {
+                                Console.WriteLine("Trapezoid convergence: " + Program.convergence_interval("t", start, stop, cCriteria, testFunc));
+                            }
+                            else
+                            {
+                                Console.WriteLine("Stop must be greater than start and cCriteria must be less than zero");
+                            }
+
+                        }
                         else
                         {
                             Console.WriteLine("please input n,m, or r for the second character");
@@ -163,7 +198,7 @@ namespace reimann_sums
         }
 
         public static double testFunc(double x) {
-            return 1/x;
+            return Math.Pow(Math.E, x);
         }
     }
 }

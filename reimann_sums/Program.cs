@@ -46,6 +46,10 @@ namespace reimann_sums
             return width * sum;
         }
 
+        public static double trapezoidalSum(double start, double stop, int n, Func<double, double> f) {
+            return (leftSum(start, stop, n, f) + rightSum(start, stop, n, f)) / 2;
+        }
+
         // "l" for left, "m" for midpoint, "r" for right
         public static int convergence_interval(string sum_type, double start, double stop, double cCriteria, Func<double,double> f) {
             bool isConverged;
@@ -86,9 +90,21 @@ namespace reimann_sums
                 Console.WriteLine("area: " + rightSum(start, stop, counter, f));
                 return counter;
             }
+            else if (sum_type.Equals("t", StringComparison.OrdinalIgnoreCase))
+            {
+                do
+                {
+                    counter++;
+                    c = Math.Abs((trapezoidalSum(start, stop, (counter + 1), f) - trapezoidalSum(start, stop, (counter), f)) / trapezoidalSum(start, stop, counter, f));
+                    isConverged = cCriteria > c;
+                } while (!isConverged);
+
+                Console.WriteLine("area: " + trapezoidalSum(start, stop, counter, f));
+                return counter;
+            }
             else
             {
-                Console.WriteLine("Please choose from L, M, or R");
+                Console.WriteLine("Please choose from L, M, R, or T");
                 return -1;
             }
         }
